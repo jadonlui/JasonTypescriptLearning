@@ -157,10 +157,10 @@ async function getData() {
     const data = (await res.json()) as Data;
     console.log("datafetch", data);
     //test
-    const h1:any = document.getElementById("box") ;
+    const h1 = document.getElementById("box") ;
     const h2 = document.querySelector("h2");
     if (h1&&h2) {
-        h1.innerText = data.id;
+        h1.innerText = data.id.toString();
         h2.innerText = data.title;
     }
 }
@@ -171,6 +171,11 @@ getData();
 //--> const form=document.querySelector(".app") as HTMLFormElement;
 // console.log(form?.children)
 
+
+
+// if (h1) {
+//     h1.innerText = data.id.toString;
+// }
 //下面這樣是固定的
 const data1: Data = {
     userId: 1,
