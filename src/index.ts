@@ -157,7 +157,7 @@ async function getData() {
     const data = (await res.json()) as Data;
     console.log("datafetch", data);
     //test
-    const h1 = document.getElementById("box") as any;
+    const h1:any = document.getElementById("box") ;
     const h2 = document.querySelector("h2");
     if (h1&&h2) {
         h1.innerText = data.id;
